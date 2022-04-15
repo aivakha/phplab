@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Task 1</title>
+</head>
+<body>
+
+    <div id="app">
+        <div class="wrapper">
+            <h3>Title</h3>
+            <ul v-for="(task, index) in tasks">
+                <div class="list-group">
+                    <input type="text" id="title" class="form-control" v-model="task.name">
+                    <li>
+                        <a class="btn btn-add" v-on:click="addTask" v-if="tasks.length - 1 <= index"
+                           v-bind:class="{ disabled: task.name.length == 0  }">Add</a>
+                        <a class="btn btn-remove" v-on:click="removeTask(index);"
+                           v-if="(tasks.length - 1 >= index) && (tasks.length -1 != index)">Remove</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

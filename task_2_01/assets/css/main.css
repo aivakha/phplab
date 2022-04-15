@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.list-container {
+    padding: 20px;
+    color: black;
+}
+.lists li, .lists button {
+    display: inline-block;
+}
+.error {
+    color: red;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: yellow;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+input {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.list-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.btn {
+    border-radius: 30px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.btn-remove {
+    background: red;
+}
+
+.btn-add {
+    background: greenyellow;
+}
